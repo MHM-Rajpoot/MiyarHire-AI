@@ -1,0 +1,1351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MiyarHire AI — a bilingual, agentic hiring platform. Project presentation for KEMET-X 2026.">
+  <meta name="theme-color" content="#EDF5FA">
+  <title>MiyarHire AI · Hiring, with a human decision.</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <script src="assets/js/translations.js" defer></script>
+  <script src="assets/js/script.js" defer>
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#stage">Skip to presentation</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs>
+<symbol id="i-mark" viewBox="0 0 32 32">
+<path d="M5 23V9l11 8L27 9v14M5 9l11-6 11 6M16 17v10"/>
+<circle cx="16" cy="17" r="3"/>
+</symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</symbol>
+<symbol id="i-grid" viewBox="0 0 24 24">
+<rect x="4" y="4" width="6" height="6" rx="1"/>
+<rect x="14" y="4" width="6" height="6" rx="1"/>
+<rect x="4" y="14" width="6" height="6" rx="1"/>
+<rect x="14" y="14" width="6" height="6" rx="1"/>
+</symbol>
+<symbol id="i-full" viewBox="0 0 24 24">
+<path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/>
+</symbol>
+<symbol id="i-play" viewBox="0 0 24 24">
+<path d="m8 5 11 7-11 7Z"/>
+</symbol>
+<symbol id="i-book" viewBox="0 0 24 24">
+<path d="M12 5v16M3 3l9 2 9-2v16l-9 2-9-2Z"/>
+</symbol>
+<symbol id="i-file" viewBox="0 0 24 24">
+<path d="M14 3H5v18h14V8Zm0 0v5h5M8 12h8m-8 4h6"/>
+</symbol>
+<symbol id="i-target" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9"/>
+<circle cx="12" cy="12" r="5"/>
+<circle cx="12" cy="12" r="1"/>
+</symbol>
+<symbol id="i-check" viewBox="0 0 24 24">
+<path d="m5 12 4 4L19 6"/>
+</symbol>
+<symbol id="i-test" viewBox="0 0 24 24">
+<rect x="5" y="4" width="14" height="17" rx="2"/>
+<path d="M9 4V2h6v2M8 10l2 2 4-4m-6 9h8"/>
+</symbol>
+<symbol id="i-filter" viewBox="0 0 24 24">
+<path d="M3 4h18l-7 9v7l-4-2v-5Z"/>
+</symbol>
+<symbol id="i-voice" viewBox="0 0 24 24">
+<rect x="9" y="3" width="6" height="12" rx="3"/>
+<path d="M5 11v1a7 7 0 0 0 14 0v-1m-7 8v3m-4 0h8"/>
+</symbol>
+<symbol id="i-muted" viewBox="0 0 24 24">
+<path d="M11 5 6 9H3v6h3l5 4Zm5 4 5 6m0-6-5 6"/>
+</symbol>
+<symbol id="i-sound" viewBox="0 0 24 24">
+<path d="M11 5 6 9H3v6h3l5 4Zm4 3a5 5 0 0 1 0 8m3-11a9 9 0 0 1 0 14"/>
+</symbol>
+<symbol id="i-chart" viewBox="0 0 24 24">
+<path d="M4 3v18h17M8 16v-5m5 5V6m5 10v-8"/>
+</symbol>
+<symbol id="i-shield" viewBox="0 0 24 24">
+<path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6Z"/>
+<path d="m8 12 3 3 5-6"/>
+</symbol>
+<symbol id="i-people" viewBox="0 0 24 24">
+<circle cx="9" cy="7" r="3"/>
+<path d="M3 21v-4a6 6 0 0 1 12 0v4M16 4a3 3 0 0 1 0 6m2 3a5 5 0 0 1 3 5v3"/>
+</symbol>
+<symbol id="i-clock" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9"/>
+<path d="M12 6v6l4 2"/>
+</symbol>
+<symbol id="i-link" viewBox="0 0 24 24">
+<path d="m10 14 4-4m-5 6-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 0 2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0"/>
+</symbol>
+<symbol id="i-globe" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9"/>
+<ellipse cx="12" cy="12" rx="4" ry="9"/>
+<path d="M3 12h18"/>
+</symbol>
+<symbol id="i-message" viewBox="0 0 24 24">
+<path d="M21 4H3v14h5v4l5-4h8ZM7 9h10M7 13h6"/>
+</symbol>
+<symbol id="i-mail" viewBox="0 0 24 24">
+<rect x="3" y="5" width="18" height="14" rx="2"/>
+<path d="m3 6 9 7 9-7"/>
+</symbol>
+<symbol id="i-close" viewBox="0 0 24 24">
+<path d="m6 6 12 12M6 18 18 6"/>
+</symbol>
+</defs>
+</svg>
+  <div class="presentation">
+    <header class="topbar">
+      <a class="brand" href="#intro" data-go="intro" aria-label="MiyarHire AI, opening slide">
+<span class="brand-mark">
+<svg class="icon" aria-hidden="true">
+<use href="#i-mark"/>
+</svg>
+</span>
+<span>MiyarHire<span class="brand-ai">AI</span>
+<span class="brand-caption">INTELLIGENCE. EVIDENCE. PEOPLE.</span>
+</span>
+</a>
+      <nav class="chapter-nav js-only" aria-label="Presentation chapters">
+<button type="button" data-go="intro" data-chapter="overview" aria-current="true">Overview</button>
+<button type="button" data-go="workflow" data-chapter="product">The product</button>
+<button type="button" data-go="market" data-chapter="opportunity">The opportunity</button>
+</nav>
+      <div class="header-tools js-only">
+<button class="tool-button icon-only theme-button" id="themeBtn" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span id="themeIcon" aria-hidden="true">☾</span></button>
+<button class="tool-button language-button" id="languageBtn" type="button" aria-label="Switch to Arabic" lang="ar" dir="rtl"><span id="languageLabel">العربية</span></button>
+<button class="tool-button" id="viewBtn" type="button" aria-label="Switch to reading view">
+<svg class="icon" aria-hidden="true">
+<use href="#i-book"/>
+</svg>
+<span class="tool-label" id="viewLabel">Read</span>
+</button>
+<button class="tool-button" id="agendaBtn" type="button" aria-label="Open slide overview" aria-haspopup="dialog">
+<svg class="icon" aria-hidden="true">
+<use href="#i-grid"/>
+</svg>
+<span class="tool-label">Slides</span>
+</button>
+<button class="tool-button icon-only" id="fullscreenBtn" type="button" aria-label="Enter fullscreen">
+<svg class="icon" aria-hidden="true">
+<use href="#i-full"/>
+</svg>
+</button>
+</div>
+    </header>
+    <main class="stage" id="stage" tabindex="-1" aria-label="MiyarHire AI presentation">
+
+<!-- 01 · A better hiring journey -->
+<section class="slide hero opening-page" id="intro" data-title="A better hiring journey" data-chapter="overview" aria-labelledby="title-intro">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="hero-copy">
+<p class="eyebrow">
+<span class="status-dot">
+</span> THE NEXT CHAPTER OF HIRING</p>
+<h1 id="title-intro" tabindex="-1">Better hiring.<br>
+<span class="text-sky">Clearer evidence.</span>
+<br>
+<span class="text-green">Human decisions.</span>
+</h1>
+<p class="hero-description" data-type>Specialized AI agents connect the entire hiring journey — from the first application to an evidence-linked scorecard. In English and Arabic.</p>
+<p class="arabic-brand" lang="ar" dir="rtl">مِعيار للتوظيف بالذكاء الاصطناعي</p>
+<div class="hero-actions">
+<button class="button button-primary js-only" type="button" data-go="workflow">Explore the workflow <svg class="icon" aria-hidden="true">
+<use href="#i-arrow"/>
+</svg>
+</button>
+<span class="small-note">The final decision stays<br>with the recruiter.</span>
+</div>
+</div>
+</div></div>
+</section>
+
+<!-- 02 · Six core agents. One coordinated workflow. -->
+<section class="slide overview-page" id="intro-evidence" data-title="Six core agents. One coordinated workflow." data-chapter="overview" aria-labelledby="title-intro-evidence">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">
+<span class="status-dot">
+</span> THE NEXT CHAPTER OF HIRING</p><h2 id="title-intro-evidence" tabindex="-1" data-type>Six core agents. One coordinated workflow.</h2></div><figure class="hero-visual">
+<div class="visual-topline">
+<span class="micro">CONNECTED BY EVIDENCE</span>
+<span class="pill pill-green">EN + AR</span>
+</div>
+<svg class="hero-art" xmlns="http://www.w3.org/2000/svg" width="760" height="660" viewBox="0 0 760 660" fill="none" role="img" aria-labelledby="hero-art-title hero-art-desc">
+  <title id="hero-art-title">MiyarHire: six connected stages of hiring</title>
+  <desc id="hero-art-desc">Intake, criteria, assessment, shortlist, interview, and scorecard surround a connected central mark. The orbit illustrates the coordinated hiring workflow, not measured performance.</desc>
+  <defs>
+    <linearGradient id="orbit-fill" x1="380" y1="112" x2="380" y2="548" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#EDF5FA"/></lineargradient>
+    <linearGradient id="center-fill" x1="322" y1="272" x2="438" y2="388" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F3F9FD"/></lineargradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#C6DEEE"/></pattern>
+    <symbol id="intake" viewBox="0 0 32 32"><path d="M7 6h12l6 6v14H7zM19 6v7h6M11 18h10M11 22h6"/></symbol>
+    <symbol id="criteria" viewBox="0 0 32 32"><path d="m5 8 2 2 4-4m3 2h12M5 16l2 2 4-4m3 2h12M5 24l2 2 4-4m3 2h12"/></symbol>
+    <symbol id="assess" viewBox="0 0 32 32"><rect x="7" y="6" width="19" height="23" rx="3"/><rect x="12" y="3" width="9" height="6" rx="2" fill="#FFFFFF"/><path d="m11 19 3 3 7-8"/></symbol>
+    <symbol id="shortlist" viewBox="0 0 32 32"><circle cx="12" cy="10" r="4"/><path d="M4 26v-3a8 8 0 0 1 16 0v3M22 10h7M22 15h5m-5 8 2 2 5-6"/></symbol>
+    <symbol id="interview" viewBox="0 0 32 32"><path d="M27 16c0 6-5 10-11 10h-3l-7 4 1-8a10 10 0 0 1-2-6C5 10 10 6 16 6s11 4 11 10Z"/><path d="M11 14v4m5-7v10m5-7v4"/></symbol>
+    <symbol id="scorecard" viewBox="0 0 32 32"><rect x="6" y="4" width="21" height="25" rx="3"/><path d="M11 10h10M11 15h6M11 23v-4m5 4v-6m5 6v-9"/></symbol>
+  </defs>
+  <circle cx="380" cy="330" r="300" fill="url(#dots)"/>
+  <circle cx="380" cy="330" r="248" fill="url(#orbit-fill)" stroke="#DCEBF6"/>
+  <circle cx="380" cy="330" r="209" stroke="#C6DEEE" stroke-dasharray="3 10"/>
+  <circle cx="380" cy="330" r="168" stroke="#DCEBF6"/>
+  <path d="M380 82a248 248 0 0 1 214.77 124" stroke="#12A5EA" stroke-width="3" stroke-linecap="round"/>
+  <path d="M594.77 454A248 248 0 0 1 380 578" stroke="#43C41F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M165.23 454a248 248 0 0 1 0-248" stroke="#12A5EA" stroke-width="3" stroke-linecap="round"/>
+  <g stroke="#C6DEEE" stroke-width="1.5" stroke-dasharray="4 6">
+    <path d="M380 132v108M551.47 231l-93.53 54M551.47 429l-93.53-54M380 528V420M208.53 429l93.53-54M208.53 231l93.53 54"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#DCEBF6">
+    <rect x="302" y="37" width="156" height="102" rx="22"/>
+    <rect x="518" y="161" width="156" height="102" rx="22"/>
+    <rect x="518" y="409" width="156" height="102" rx="22"/>
+    <rect x="302" y="533" width="156" height="102" rx="22"/>
+    <rect x="86" y="409" width="156" height="102" rx="22"/>
+    <rect x="86" y="161" width="156" height="102" rx="22"/>
+  </g>
+  <g fill="#F3F9FD">
+    <circle cx="380" cy="77" r="25"/><circle cx="596" cy="201" r="25"/><circle cx="596" cy="449" r="25"/>
+    <circle cx="380" cy="573" r="25"/><circle cx="164" cy="449" r="25"/><circle cx="164" cy="201" r="25"/>
+  </g>
+  <g stroke="#0B7FC0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#intake" x="364" y="61" width="32" height="32"/>
+    <use href="#criteria" x="580" y="185" width="32" height="32"/>
+    <use href="#assess" x="580" y="433" width="32" height="32"/>
+    <use href="#shortlist" x="364" y="557" width="32" height="32"/>
+    <use href="#interview" x="148" y="433" width="32" height="32"/>
+    <use href="#scorecard" x="148" y="185" width="32" height="32"/>
+  </g>
+  <g fill="#072438" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" text-anchor="middle">
+    <text x="380" y="120">Intake</text><text x="596" y="244">Criteria</text><text x="596" y="492">Assessment</text>
+    <text x="380" y="616">Shortlist</text><text x="164" y="492">Interview</text><text x="164" y="244">Scorecard</text>
+  </g>
+  <g fill="#43C41F" stroke="#FFFFFF" stroke-width="3">
+    <circle cx="448" cy="47" r="7"/><circle cx="664" cy="171" r="7"/><circle cx="664" cy="419" r="7"/>
+    <circle cx="448" cy="543" r="7"/><circle cx="232" cy="419" r="7"/><circle cx="232" cy="171" r="7"/>
+  </g>
+  <circle cx="380" cy="330" r="111" fill="#FFFFFF" stroke="#DCEBF6"/>
+  <circle cx="380" cy="330" r="92" fill="url(#center-fill)" stroke="#C6DEEE"/>
+  <g transform="translate(336.8 274) scale(2.7)" stroke="#0B7FC0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 23V9l11 8L27 9v14M5 9l11-6 11 6M16 17v10"/>
+    <circle cx="16" cy="17" r="3"/>
+    <circle cx="16" cy="17" r="3" fill="#43C41F" stroke="none"/>
+  </g>
+  <text x="380" y="370" fill="#072438" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="-.5" text-anchor="middle">MiyarHire<tspan dx="4" fill="#2E8F14">AI</tspan></text>
+</svg>
+
+<figcaption>
+<span class="status-dot">
+</span> Six core agents. One coordinated workflow.</figcaption>
+</figure><div class="hero-bottom">
+<div class="hero-facts">
+<span>
+<b>UK</b> Founder based in Manchester</span>
+<span>
+<b>2026</b> Founded</span>
+<span>
+<b>Prototype</b> Ready · R&amp;D stage</span>
+</div>
+<div class="event-signature">KEMET-X <b>2026</b>
+<span>14–15 DECEMBER · GIZA, EGYPT</span>
+</div>
+</div>
+</div></div>
+</section>
+
+<!-- 03 · The hiring challenge -->
+<section class="slide challenge-intro-page" id="challenge" data-title="The hiring challenge" data-chapter="overview" aria-labelledby="title-challenge">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading">
+<div>
+<p class="eyebrow">01 / THE CHALLENGE</p>
+<h2 id="title-challenge" tabindex="-1">Finding the right person<br>starts with <span class="text-sky">a better process.</span>
+</h2>
+<p class=lead data-type>High application volumes, mixed formats, and language barriers make manual hiring slow and inconsistent.</p>
+</div>
+</div><p class="takeaway">
+<svg class="icon" aria-hidden="true">
+<use href="#i-people"/>
+</svg>Designed to reduce repetitive work while preserving professional judgment.</p>
+</div></div>
+</section>
+
+<!-- 04 · Same resume. Two reading approaches. -->
+<section class="slide vision-page" id="challenge-vision" data-title="Same resume. Two reading approaches." data-chapter="overview" aria-labelledby="title-challenge-vision">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">01 / THE CHALLENGE</p><h2 id="title-challenge-vision" tabindex="-1">Same resume. Two reading approaches.</h2></div><figure class="vision-demo scene-figure" aria-labelledby="title-challenge-vision">
+<img class="scene-image" src="assets/img/ats-vlm-comparison.gif" width="960" height="540" decoding="async" alt="Animated comparison: one two-column resume is scanned twice. The text-only ATS parser reports mixed columns, missing context, and manual correction; the vision-language model reports layout plus text, linked experience, and a structured draft.">
+<div class="scene-points" data-type>
+<p class="point-warn"><b>Text-only ATS parser</b><span>A complex layout can break reading order and separate skills from experience.</span></p>
+<p class="point-good"><b>Vision-language model (VLM)</b><span>Visual context can help reconstruct the document for recruiter verification.</span></p>
+</div>
+<figcaption>Concept animation, not a benchmark. ATS capabilities vary; model extraction still needs validation.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- 05 · Screening, assessments & coordination -->
+<section class="slide comparison-page" id="challenge-screening" data-title="Screening, assessments &amp; coordination" data-chapter="overview" aria-labelledby="title-challenge-screening">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">01 / THE CHALLENGE</p><h2 id="title-challenge-screening" tabindex="-1" data-type>Screening, assessments &amp; coordination</h2></div><div class="comparison-table" role="table" aria-label="Traditional hiring compared with the proposed platform">
+<div class="comparison-row table-head" role="row">
+<span role="columnheader">THE HIRING STAGE</span>
+<span role="columnheader">THE MANUAL CHALLENGE</span>
+<span role="columnheader">WITH MIYARHIRE AI</span>
+</div><div class="comparison-row" role="row">
+<strong role="rowheader">
+<svg class="icon" aria-hidden="true">
+<use href="#i-file"/>
+</svg>Screening</strong>
+<span role="cell">Resumes reviewed by hand, in mixed formats and languages.</span>
+<span role="cell">Structured applications, assessed against approved criteria.</span>
+</div><div class="comparison-row" role="row">
+<strong role="rowheader">
+<svg class="icon" aria-hidden="true">
+<use href="#i-test"/>
+</svg>Assessments</strong>
+<span role="cell">Generic tests reused across roles or skipped.</span>
+<span role="cell">Role-specific tests and consistent scoring rubrics.</span>
+</div><div class="comparison-row" role="row">
+<strong role="rowheader">
+<svg class="icon" aria-hidden="true">
+<use href="#i-clock"/>
+</svg>Coordination</strong>
+<span role="cell">Email chains, time zones, and rescheduling.</span>
+<span role="cell">Automated invitations, reminders, and scheduling.</span>
+</div>
+</div>
+</div></div>
+</section>
+
+<!-- 06 · Interviews & evaluation -->
+<section class="slide comparison-page" id="challenge-decisions" data-title="Interviews &amp; evaluation" data-chapter="overview" aria-labelledby="title-challenge-decisions">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">01 / THE CHALLENGE</p><h2 id="title-challenge-decisions" tabindex="-1" data-type>Interviews &amp; evaluation</h2></div><div class="comparison-table" role="table" aria-label="Traditional hiring compared with the proposed platform">
+<div class="comparison-row table-head" role="row">
+<span role="columnheader">THE HIRING STAGE</span>
+<span role="columnheader">THE MANUAL CHALLENGE</span>
+<span role="columnheader">WITH MIYARHIRE AI</span>
+</div><div class="comparison-row" role="row">
+<strong role="rowheader">
+<svg class="icon" aria-hidden="true">
+<use href="#i-voice"/>
+</svg>Interviews</strong>
+<span role="cell">Varying questions and notes written from memory.</span>
+<span role="cell">Structured English or Arabic interviews with transcripts.</span>
+</div><div class="comparison-row" role="row">
+<strong role="rowheader">
+<svg class="icon" aria-hidden="true">
+<use href="#i-chart"/>
+</svg>Evaluation</strong>
+<span role="cell">Fragmented impressions and incomplete decision records.</span>
+<span role="cell">Comparable scorecards linked to job-relevant evidence.</span>
+</div>
+</div>
+</div></div>
+</section>
+
+<!-- 07 · The complete workflow -->
+<section class="slide workflow-page" id="workflow" data-title="The complete workflow" data-chapter="product" aria-labelledby="title-workflow">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading heading-split">
+<div>
+<p class="eyebrow">02 / PLATFORM DESIGN</p>
+<h2 id="title-workflow" tabindex="-1" data-type>One connected journey.<br>
+<span class="text-green">Human oversight throughout.</span>
+</h2>
+</div>
+<p class="heading-aside">Eight steps from a job description<br>to a recorded hiring decision.</p>
+</div><ol class="workflow-grid" >
+<li class="">
+<span class="step-number">01</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-file"/>
+</svg>
+<h3>Connect</h3>
+<p>Upload the job description and candidate applications.</p>
+</li><li class="">
+<span class="step-number">02</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-target"/>
+</svg>
+<h3>Standardize</h3>
+<p>Structure candidate data and propose job-specific criteria.</p>
+</li><li class="human-step">
+<span class="step-number">03 · HUMAN REVIEW</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-people"/>
+</svg>
+<h3>Approve criteria</h3>
+<p>Recruiter reviews weights, requirements, and knockout rules.</p>
+</li><li class="">
+<span class="step-number">04</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-test"/>
+</svg>
+<h3>Assess</h3>
+<p>Candidates complete a relevant assessment when required.</p>
+</li>
+</ol>
+</div></div>
+</section>
+
+<!-- 08 · From shortlist to decision -->
+<section class="slide workflow-page" id="workflow-decision" data-title="From shortlist to decision" data-chapter="product" aria-labelledby="title-workflow-decision">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">02 / PLATFORM DESIGN</p><h2 id="title-workflow-decision" tabindex="-1" data-type>From shortlist to decision</h2></div><ol class="workflow-grid" start="5">
+<li class="">
+<span class="step-number">05</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-filter"/>
+</svg>
+<h3>Recommend</h3>
+<p>Present an evidence-backed shortlist for human review.</p>
+</li><li class="">
+<span class="step-number">06</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-voice"/>
+</svg>
+<h3>Interview</h3>
+<p>Selected candidates interview in English or Arabic.</p>
+</li><li class="">
+<span class="step-number">07</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-chart"/>
+</svg>
+<h3>Compare</h3>
+<p>Bring the evidence into a comparative recruiter scorecard.</p>
+</li><li class="human-step">
+<span class="step-number">08 · HUMAN REVIEW</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-check"/>
+</svg>
+<h3>Decide</h3>
+<p>The recruiter makes and records the final hiring decision.</p>
+</li>
+</ol><div class="support-strip">
+<span class="micro">SUPPORT AT EVERY STAGE</span>
+<span>Scheduling</span>
+<span>Communication</span>
+<span>Bias &amp; compliance</span>
+<span>Integrations</span>
+</div>
+</div></div>
+</section>
+
+<!-- 09 · Meet the ten agents -->
+<section class="slide team-page" id="agents" data-title="Meet the ten agents" data-chapter="product" aria-labelledby="title-agents">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading">
+<div>
+<p class="eyebrow">03 / THE AGENT ARCHITECTURE</p>
+<h2 id="title-agents" tabindex="-1">Specialists at every step.<br>
+<span class="text-sky">A shared evidence record.</span>
+</h2>
+</div>
+</div><figure class="architecture-chart team-hub scene-figure" aria-labelledby="title-agents">
+<img class="scene-image" src="assets/img/agent-teamwork.gif" width="960" height="540" decoding="async" alt="Animated diagram: six numbered agents — intake, role criteria, assessments, screening, interviews, and evaluation — light up in turn and hand structured outputs to a shared evidence record, with four supporting agents for scheduling, communication, bias and compliance, and integration beneath them.">
+<div class="scene-points" data-type>
+<p class="point-good"><b>Shared evidence</b><span>Six specialists exchange structured outputs. Four supporting agents coordinate the work.</span></p>
+<p class="point-human"><b>Recruiter approves &amp; decides</b><span>Every handoff stays traceable for the people making the decision.</span></p>
+</div>
+<figcaption>Animated handoffs illustrate the platform design.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- 10 · Intake, criteria & assessments -->
+<section class="slide agent-detail-page" id="agents-prepare" data-title="Intake, criteria &amp; assessments" data-chapter="product" aria-labelledby="title-agents-prepare">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">03 / THE AGENT ARCHITECTURE</p><h2 id="title-agents-prepare" tabindex="-1" data-type>Intake, criteria &amp; assessments</h2></div><div class="agent-grid team-agents" >
+<article class="agent-card">
+<span class="micro">01 / INTAKE</span>
+<h3>Candidate Intake &amp; Standardization</h3>
+<p>Parse English and Arabic resumes; structure records and flag missing data or duplicates.</p>
+</article><article class="agent-card">
+<span class="micro">02 / CRITERIA</span>
+<h3>JD &amp; Resume Criteria</h3>
+<p>Define must-have, preferred, and knockout criteria, with weights for recruiter approval.</p>
+</article><article class="agent-card">
+<span class="micro">03 / ASSESSMENT</span>
+<h3>Test &amp; Assessment Designer</h3>
+<p>Create role-specific questions, difficulty levels, and consistent scoring rubrics.</p>
+</article>
+</div>
+</div></div>
+</section>
+
+<!-- 11 · Screening, interviews & evaluation -->
+<section class="slide agent-detail-page" id="agents-evaluate" data-title="Screening, interviews &amp; evaluation" data-chapter="product" aria-labelledby="title-agents-evaluate">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">03 / THE AGENT ARCHITECTURE</p><h2 id="title-agents-evaluate" tabindex="-1" data-type>Screening, interviews &amp; evaluation</h2></div><div class="agent-grid team-agents" >
+<article class="agent-card">
+<span class="micro">04 / SCREENING</span>
+<h3>Screening &amp; Shortlisting</h3>
+<p>Evaluate role fit and recommend a shortlist with clear reasons for human review.</p>
+</article><article class="agent-card">
+<span class="micro">05 / INTERVIEW</span>
+<h3>Multilingual Interview</h3>
+<p>Conduct structured bilingual interviews and retain responses, transcripts, and evidence.</p>
+</article><article class="agent-card">
+<span class="micro">06 / EVALUATION</span>
+<h3>Final Evaluation &amp; Scoring</h3>
+<p>Combine screening, tests, and interviews into comparative candidate scorecards.</p>
+</article>
+</div>
+</div></div>
+</section>
+
+<!-- 12 · Support at every stage -->
+<section class="slide support-page" id="agents-support" data-title="Support at every stage" data-chapter="product" aria-labelledby="title-agents-support">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">03 / THE AGENT ARCHITECTURE</p><h2 id="title-agents-support" tabindex="-1" data-type>Support at every stage</h2></div><div class="support-agents">
+<span>
+<b>07 Scheduling</b>Time zones &amp; reminders</span>
+<span>
+<b>08 Communication</b>Updates &amp; next steps</span>
+<span>
+<b>09 Bias &amp; Compliance</b>Consistency &amp; audit records</span>
+<span>
+<b>10 Integration</b>ATS, HRIS &amp; connected tools</span>
+</div>
+</div></div>
+</section>
+
+<!-- 13 · Assess for the actual role -->
+<section class="slide assessment-copy-page" id="assessments" data-title="Assess for the actual role" data-chapter="product" aria-labelledby="title-assessments">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading">
+<div>
+<p class="eyebrow">04 / ASSESSMENT DESIGN</p>
+<h2 id="title-assessments" tabindex="-1">Start with the role.<br>
+<span class="text-sky">Build the right assessment.</span>
+</h2>
+</div>
+</div><div class="editorial-copy">
+<p class="lead" data-type>The job description shapes the questions, difficulty, and scoring framework — with recruiter approval before use.</p>
+<div class="feature-line">
+<span class="icon-tile">
+<svg class="icon" aria-hidden="true">
+<use href="#i-target"/>
+</svg>
+</span>
+<div>
+<h3>Job-specific by design</h3>
+<p>Technical, behavioral, language, and situational assessments matched to the position.</p>
+</div>
+</div>
+<div class="feature-line">
+<span class="icon-tile green">
+<svg class="icon" aria-hidden="true">
+<use href="#i-shield"/>
+</svg>
+</span>
+<div>
+<h3>Integrity with human review</h3>
+<p>The described workflow includes proportionate integrity checks, with anomalies flagged for a person to review.</p>
+</div>
+</div>
+<div class="feature-line">
+<span class="icon-tile">
+<svg class="icon" aria-hidden="true">
+<use href="#i-people"/>
+</svg>
+</span>
+<div>
+<h3>Accessible participation</h3>
+<p>Alternative formats and accommodations support candidates who need a different way to participate.</p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+
+<!-- 14 · From requirements to evidence -->
+<section class="slide assessment-flow-page" id="assessment-framework" data-title="From requirements to evidence" data-chapter="product" aria-labelledby="title-assessment-framework">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">04 / ASSESSMENT DESIGN</p><h2 id="title-assessment-framework" tabindex="-1" data-type>From requirements to evidence</h2></div><figure class="assessment-diagram panel">
+<div class="diagram-label micro">FROM REQUIREMENTS TO EVIDENCE</div>
+<div class="document-block">
+<svg class="icon" aria-hidden="true">
+<use href="#i-file"/>
+</svg>
+<div>
+<h3>Job description</h3>
+<p>Role · skills · experience level</p>
+</div>
+</div>
+<div class="connector-arrow" aria-hidden="true">↓</div>
+<div class="criteria-box">
+<p class="micro">EVALUATION FRAMEWORK</p>
+<div class="tag-row">
+<span>Must-have</span>
+<span>Preferred</span>
+<span>Knockout</span>
+</div>
+<div class="approval-line">
+<svg class="icon" aria-hidden="true">
+<use href="#i-check"/>
+</svg>Recruiter-approved criteria &amp; weights</div>
+</div>
+<div class="connector-arrow" aria-hidden="true">↓</div>
+<div class="assessment-output">
+<svg class="icon" aria-hidden="true">
+<use href="#i-test"/>
+</svg>
+<h3>Role-specific assessment</h3>
+<p>Questions + consistent scoring rubric</p>
+<span class="pill">English + Arabic</span>
+</div>
+<figcaption>Assessment design flow</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- 15 · Bilingual by design -->
+<section class="slide interview-demo-page" id="interviews" data-title="Bilingual by design" data-chapter="product" aria-labelledby="title-interviews">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading heading-split">
+<div>
+<p class="eyebrow">05 / THE CANDIDATE EXPERIENCE</p>
+<h2 id="title-interviews" tabindex="-1" data-type>Two languages.<br>
+<span class="text-green">One consistent framework.</span>
+</h2>
+</div>
+<div class="language-lockup" aria-label="English and Arabic">
+<span>EN</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-link"/>
+</svg>
+<span lang="ar" dir="rtl">ع</span>
+</div>
+</div><div class="interview-panel panel">
+<div class="interview-top">
+<div>
+<span class="micro">STRUCTURED BILINGUAL INTERVIEWS</span>
+<h3>Listen to the evidence.</h3>
+</div>
+<span class="pill">Text · Voice · Video*</span>
+</div>
+<img class="wave-image" src="assets/img/interview-wave.gif" decoding="async" alt="Decorative waveform representing English and Arabic voice interviews; it does not display candidate data." width="640" height="140">
+<div class="interview-bottom">
+<span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-voice"/>
+</svg>Responses → transcripts → job-relevant evidence</span>
+</div>
+</div><p class="footnote">*Text, voice, and video are described in the platform design; video support is also a Phase 4 roadmap item. No emotion or personality inference from faces, accents, or voices.</p>
+</div></div>
+</section>
+
+<!-- 16 · A consistent candidate experience -->
+<section class="slide interview-copy-page" id="interview-evidence" data-title="A consistent candidate experience" data-chapter="product" aria-labelledby="title-interview-evidence">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">05 / THE CANDIDATE EXPERIENCE</p><h2 id="title-interview-evidence" tabindex="-1" data-type>A consistent candidate experience</h2></div><div class="three-column">
+<article class="plain-feature">
+<span class="feature-index">01</span>
+<h3>A localized journey</h3>
+<p>English and Arabic support, including right-to-left candidate interfaces.</p>
+</article>
+<article class="plain-feature">
+<span class="feature-index">02</span>
+<h3>Consistent evaluation</h3>
+<p>Role-specific questions and approved rubrics, with language quality evaluated separately.</p>
+</article>
+<article class="plain-feature">
+<span class="feature-index">03</span>
+<h3>Job-relevant signals</h3>
+<p>Answer clarity, evidence depth, cross-source consistency, and language proficiency.</p>
+</article>
+</div>
+</div></div>
+</section>
+
+<!-- 17 · Every score has a source -->
+<section class="slide evidence-page" id="evidence" data-title="Every score has a source" data-chapter="product" aria-labelledby="title-evidence">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading">
+<div>
+<p class="eyebrow">06 / EXPLAINABLE EVALUATION</p>
+<h2 id="title-evidence" tabindex="-1">Every recommendation<br>
+<span class="text-sky">has an evidence trail.</span>
+</h2>
+<p class=lead data-type>One approved framework connects resume, assessment, and interview evidence.</p>
+</div>
+</div><div class="evidence-inputs">
+<div class="evidence-source">
+<span class="icon-tile">
+<svg class="icon" aria-hidden="true">
+<use href="#i-file"/>
+</svg>
+</span>
+<div>
+<h3>Application</h3>
+<p>Skills, experience, education, and languages.</p>
+</div>
+</div>
+<div class="evidence-source">
+<span class="icon-tile">
+<svg class="icon" aria-hidden="true">
+<use href="#i-test"/>
+</svg>
+</span>
+<div>
+<h3>Assessment</h3>
+<p>Role-specific responses and rubric-based results.</p>
+</div>
+</div>
+<div class="evidence-source">
+<span class="icon-tile green">
+<svg class="icon" aria-hidden="true">
+<use href="#i-voice"/>
+</svg>
+</span>
+<div>
+<h3>Interview</h3>
+<p>Answers, transcript segments, and demonstrated performance.</p>
+</div>
+</div>
+</div><div class="takeaway">
+<svg class="icon" aria-hidden="true">
+<use href="#i-link"/>
+</svg>Each score traces back to the answer or transcript segment that produced it.</div>
+</div></div>
+</section>
+
+<!-- 18 · Comparative scorecard -->
+<section class="slide scorecard-page" id="evidence-scorecard" data-title="Comparative scorecard" data-chapter="product" aria-labelledby="title-evidence-scorecard">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">06 / EXPLAINABLE EVALUATION</p><h2 id="title-evidence-scorecard" tabindex="-1" data-type>Comparative scorecard</h2></div><div class="scorecard panel">
+<div class="scorecard-heading">
+<span class="icon-tile">
+<svg class="icon" aria-hidden="true">
+<use href="#i-chart"/>
+</svg>
+</span>
+<div>
+<span class="micro">DESIGNED OUTPUT</span>
+<h3>Comparative scorecard</h3>
+</div>
+</div>
+<div class="scorecard-row">
+<b>Role match</b>
+<span>Approved job criteria</span>
+</div>
+<div class="scorecard-row">
+<b>Strengths &amp; concerns</b>
+<span>Supporting evidence</span>
+</div>
+<div class="scorecard-row">
+<b>Recommendations</b>
+<span>Traceable reasoning</span>
+</div>
+<div class="scorecard-row">
+<b>Decision record</b>
+<span>Human review &amp; audit trail</span>
+</div>
+<div class="scorecard-decision">
+<svg class="icon" aria-hidden="true">
+<use href="#i-people"/>
+</svg>
+<span>Final decision: <b>the recruiter</b>
+</span>
+</div>
+</div>
+</div></div>
+</section>
+
+<!-- 19 · Trust and human oversight -->
+<section class="slide trust-page" id="trust" data-title="Trust and human oversight" data-chapter="product" aria-labelledby="title-trust">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading heading-split">
+<div>
+<p class="eyebrow">07 / RESPONSIBLE AI DESIGN</p>
+<h2 id="title-trust" tabindex="-1" data-type>Automate the work.<br>
+<span class="text-green">Keep the accountability.</span>
+</h2>
+</div>
+<span class="trust-emblem">
+<svg class="icon" aria-hidden="true">
+<use href="#i-shield"/>
+</svg>
+</span>
+</div><div class="trust-grid" >
+<article class="trust-card">
+<span class="feature-index">01</span>
+<h3>Human approval</h3>
+<p>Recruiters approve criteria, questions, weights, and knockout rules. People review shortlisting, rejection, and final selection.</p>
+</article><article class="trust-card">
+<span class="feature-index">02</span>
+<h3>Explainable evidence</h3>
+<p>Scores point to job-relevant evidence. Versioned criteria, agent outputs, and human approvals support an audit trail.</p>
+</article>
+</div><div class="trust-boundary">
+<svg class="icon" aria-hidden="true">
+<use href="#i-shield"/>
+</svg>
+<p>
+<strong>Job-related performance only.</strong> No emotion, personality, or character inference from faces, accents, or voices.</p>
+</div>
+</div></div>
+</section>
+
+<!-- 20 · Candidate data, fairness & access -->
+<section class="slide trust-page" id="trust-access" data-title="Candidate data, fairness &amp; access" data-chapter="product" aria-labelledby="title-trust-access">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">07 / RESPONSIBLE AI DESIGN</p><h2 id="title-trust-access" tabindex="-1" data-type>Candidate data, fairness &amp; access</h2></div><div class="trust-grid" >
+<article class="trust-card">
+<span class="feature-index">03</span>
+<h3>Candidate data controls</h3>
+<p>Consent, data minimization, encryption, role-based access, and retention limits are part of the proposed safeguards.</p>
+</article><article class="trust-card">
+<span class="feature-index">04</span>
+<h3>Fairness &amp; access</h3>
+<p>Review language quality and scoring consistency. Offer accessible alternatives, clarification, and human review.</p>
+</article>
+</div><p class="footnote">These are design safeguards. Legal, HR, and data-protection specialists should confirm the final workflow before production deployment.</p>
+</div></div>
+</section>
+
+<!-- 21 · Who we are building for -->
+<section class="slide customer-page" id="market" data-title="Who we are building for" data-chapter="opportunity" aria-labelledby="title-market">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading">
+<div>
+<p class="eyebrow">08 / THE CUSTOMER</p>
+<h2 id="title-market" tabindex="-1" data-type>Built for hiring at volume.<br>
+<span class="text-sky">Across languages and markets.</span>
+</h2>
+</div>
+</div><div class="market-cards">
+<article class="market-card">
+<span class="icon-tile">
+<svg class="icon" aria-hidden="true">
+<use href="#i-people"/>
+</svg>
+</span>
+<h3>Medium &amp; large employers</h3>
+<p>Teams processing high application volumes and repeatable hiring needs.</p>
+</article>
+<article class="market-card">
+<span class="icon-tile green">
+<svg class="icon" aria-hidden="true">
+<use href="#i-grid"/>
+</svg>
+</span>
+<h3>Recruitment agencies</h3>
+<p>Recruiters managing several roles, clients, and candidate pools.</p>
+</article>
+<article class="market-card">
+<span class="icon-tile">
+<svg class="icon" aria-hidden="true">
+<use href="#i-globe"/>
+</svg>
+</span>
+<h3>English–Arabic employers</h3>
+<p>Organizations hiring across English- and Arabic-speaking markets.</p>
+</article>
+</div>
+</div></div>
+</section>
+
+<!-- 22 · The buying team & target sectors -->
+<section class="slide buyer-page" id="market-buyers" data-title="The buying team &amp; target sectors" data-chapter="opportunity" aria-labelledby="title-market-buyers">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">08 / THE CUSTOMER</p><h2 id="title-market-buyers" tabindex="-1" data-type>The buying team &amp; target sectors</h2></div><aside class="buyer-panel panel">
+<span class="micro">THE BUYING TEAM</span>
+<h3>People responsible<br>for better hiring.</h3>
+<ul class="clean-list">
+<li>Head of Talent</li>
+<li>Recruitment Director</li>
+<li>HR Director</li>
+<li>Recruitment-agency owner</li>
+</ul>
+<div class="buyer-note">
+<svg class="icon" aria-hidden="true">
+<use href="#i-globe"/>
+</svg>
+<p>MENA and international employers.<br>
+<b>Initial launch geography to be confirmed.</b>
+</p>
+</div>
+</aside><div class="sector-strip">
+<span class="micro">TARGET SECTORS</span>
+<div class="tag-row">
+<span>Customer service</span>
+<span>Hospitality</span>
+<span>Healthcare</span>
+<span>Technology</span>
+<span>Graduate recruitment</span>
+</div>
+</div>
+</div></div>
+</section>
+
+<!-- 23 · The business model -->
+<section class="slide pricing-page" id="model" data-title="The business model" data-chapter="opportunity" aria-labelledby="title-model">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading">
+<div>
+<p class="eyebrow">09 / BUSINESS MODEL</p>
+<h2 id="title-model" tabindex="-1">Four revenue paths.<br>
+<span class="text-green">One hiring platform.</span>
+</h2>
+<p class=lead data-type>A proposed model aligned with recruiter seats, hiring volume, and enterprise needs.</p>
+</div>
+</div><div class="pricing-grid" >
+<article class="pricing-card">
+<span class="micro">01 / RECURRING</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-grid"/>
+</svg>
+<h3>Subscription</h3>
+<p>Monthly or annual software plans.</p>
+<div class="pricing-basis">Recruiter seats<br>Hiring volume<br>Enabled features</div>
+</article><article class="pricing-card">
+<span class="micro">02 / ACTIVITY</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-chart"/>
+</svg>
+<h3>Usage fees</h3>
+<p>Pricing tied to completed hiring activities.</p>
+<div class="pricing-basis">Per assessment<br>Per AI-led interview</div>
+</article>
+</div>
+</div></div>
+</section>
+
+<!-- 24 · Enterprise & agency plans -->
+<section class="slide pricing-page" id="model-partners" data-title="Enterprise &amp; agency plans" data-chapter="opportunity" aria-labelledby="title-model-partners">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">09 / BUSINESS MODEL</p><h2 id="title-model-partners" tabindex="-1" data-type>Enterprise &amp; agency plans</h2></div><div class="pricing-grid" >
+<article class="pricing-card">
+<span class="micro">03 / ENTERPRISE</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-link"/>
+</svg>
+<h3>Enterprise</h3>
+<p>Deployment and support for larger organizations.</p>
+<div class="pricing-basis">Integrations &amp; localization<br>Security controls<br>Onboarding &amp; support</div>
+</article><article class="pricing-card">
+<span class="micro">04 / PARTNERS</span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-people"/>
+</svg>
+<h3>Agency plans</h3>
+<p>Workspaces for recruitment providers.</p>
+<div class="pricing-basis">Multiple clients<br>Multiple roles<br>Shared hiring workflows</div>
+</article>
+</div>
+</div></div>
+</section>
+
+<!-- 25 · Revenue & pricing status -->
+<section class="slide revenue-page" id="model-revenue" data-title="Revenue &amp; pricing status" data-chapter="opportunity" aria-labelledby="title-model-revenue">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">09 / BUSINESS MODEL</p><h2 id="title-model-revenue" tabindex="-1" data-type>Revenue &amp; pricing status</h2></div><div class="revenue-strip">
+<div>
+<b>$0</b>
+<span>Monthly recurring revenue</span>
+</div>
+<div>
+<b>$0</b>
+<span>Revenue in the last 12 months</span>
+</div>
+<p>Currently pre-revenue and in R&amp;D.<br>Pricing and packaging remain to be confirmed.</p>
+</div>
+</div></div>
+</section>
+
+<!-- 26 · Prototype and team -->
+<section class="slide prototype-page" id="progress" data-title="Prototype and team" data-chapter="opportunity" aria-labelledby="title-progress">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading heading-split">
+<div>
+<p class="eyebrow">10 / WHERE WE ARE</p>
+<h2 id="title-progress" tabindex="-1" data-type>A working prototype.<br>
+<span class="text-sky">Built with in-house expertise.</span>
+</h2>
+</div>
+<span class="pill pill-green">RESEARCH &amp; DEVELOPMENT</span>
+</div><div class="prototype-panel panel">
+<span class="micro">PROTOTYPE SCOPE</span>
+<h3>The core experience is ready.</h3>
+<ul class="check-list">
+<li>
+<svg class="icon" aria-hidden="true">
+<use href="#i-check"/>
+</svg>Resume screening</li>
+<li>
+<svg class="icon" aria-hidden="true">
+<use href="#i-check"/>
+</svg>Job-specific assessment generation</li>
+<li>
+<svg class="icon" aria-hidden="true">
+<use href="#i-check"/>
+</svg>Structured bilingual interviews</li>
+<li>
+<svg class="icon" aria-hidden="true">
+<use href="#i-check"/>
+</svg>Combined candidate scorecards</li>
+</ul>
+<p class="footnote">The prototype is not yet publicly or commercially available.</p>
+</div>
+</div></div>
+</section>
+
+<!-- 27 · Stage one: video & audio analysis -->
+<section class="slide video-demo-page" id="progress-demo" data-title="Stage one: video &amp; audio analysis" data-chapter="opportunity" aria-labelledby="title-progress-demo">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading heading-split">
+<div>
+<p class="eyebrow">
+<span class="status-dot"></span> 10 / WHERE WE ARE</p>
+<h2 id="title-progress-demo" tabindex="-1" data-type>Stage one is built.<br>
+<span class="text-green">Video and audio, second by second.</span>
+</h2>
+</div>
+<span class="pill pill-green">STAGE 1 · DELIVERED</span>
+</div><figure class="video-demo scene-figure" aria-labelledby="title-progress-demo">
+<div class="video-column">
+<div class="video-frame" data-video="YL4P2FAa_4A" data-video-seconds="150" data-video-title="Emotion Detection From Video">
+<a class="video-poster" href="https://www.youtube.com/watch?v=YL4P2FAa_4A" target="_blank" rel="noopener" aria-label="Play the stage one demonstration, 2 minutes 30 seconds">
+<img src="assets/img/video-emotion-poster.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="The stage one review interface: a recorded speaker with facial landmark points, a per-second affect timeline, and a review panel showing the observed change, severity, and model confidence.">
+<span class="video-play">
+<svg class="icon" aria-hidden="true">
+<use href="#i-play"/>
+</svg>
+</span>
+</a>
+<span class="video-length">2:30</span>
+<p class="video-note">This deck is open as a local file, so the demonstration opens on YouTube in a new tab. Serve this folder over http to play it inside the slide.</p>
+</div>
+<button class="video-sound" type="button" aria-pressed="false" aria-label="Demonstration sound">
+<svg class="icon icon-muted" aria-hidden="true">
+<use href="#i-muted"/>
+</svg>
+<svg class="icon icon-sound" aria-hidden="true">
+<use href="#i-sound"/>
+</svg>
+<span class="sound-off">Sound off</span>
+<span class="sound-on">Sound on</span>
+</button>
+</div>
+<div class="scene-points">
+<p class="point-good"><b>Three signals, one timeline</b><span>Voice audio, 68 facial landmark samples, and speech text compared in embedding space.</span></p>
+<p class="point-good"><b>A label and a confidence</b><span>Every second of the recording carries its own reading, so review moments can be found and replayed.</span></p>
+<p class="point-human"><b>A person records the observation</b><span>The build presents estimated signals for review. It never writes the conclusion itself.</span></p>
+</div>
+<figcaption>Research build shown on the public eNTERFACE research dataset, not candidate data. It demonstrates the multimodal pipeline delivered in stage one.</figcaption>
+</figure><p class="footnote">Stage one delivers the video, audio, and speech-text analysis engine. Candidate evaluation stays job-related: MiyarHire does not infer emotion, personality, or character from faces, accents, or voices. The demonstration plays from YouTube and needs an internet connection.</p>
+</div></div>
+</section>
+
+<!-- 28 · Built with in-house expertise. -->
+<section class="slide founder-page" id="progress-team" data-title="Built with in-house expertise." data-chapter="opportunity" aria-labelledby="title-progress-team">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">10 / WHERE WE ARE</p><h2 id="title-progress-team" tabindex="-1" data-type>Built with in-house expertise.</h2></div><div class="founder-panel">
+<span class="micro">FOUNDER &amp; CEO</span>
+<h3>Muhammad<br>Hassan Mukhtar</h3>
+<p class="founder-role">Applied AI &amp; LLM Engineer · Manchester, UK</p>
+<p>MSc Artificial Intelligence with Distinction, University of Salford. Experience building agentic AI, RAG systems, multilingual interview tools, and production applications.</p>
+<div class="affiliation">
+<svg class="icon" aria-hidden="true">
+<use href="#i-link"/>
+</svg>Startup affiliated with the University of Salford, Manchester.</div>
+</div>
+</div></div>
+</section>
+
+<!-- 29 · Team & ownership -->
+<section class="slide metrics-page" id="progress-metrics" data-title="Team &amp; ownership" data-chapter="opportunity" aria-labelledby="title-progress-metrics">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">10 / WHERE WE ARE</p><h2 id="title-progress-metrics" tabindex="-1" data-type>Team &amp; ownership</h2></div><div class="status-metrics">
+<div>
+<b>3</b>
+<span>Founders</span>
+</div>
+<div>
+<b>3</b>
+<span>Full-time team members</span>
+</div>
+<div>
+<b>100%</b>
+<span>Technology owned by the team</span>
+</div>
+<div>
+<b>&lt;3 <small>months</small>
+</b>
+<span>Runway in the application draft</span>
+</div>
+</div>
+</div></div>
+</section>
+
+<!-- 30 · The path to enterprise pilots -->
+<section class="slide roadmap-page" id="roadmap" data-title="The path to enterprise pilots" data-chapter="opportunity" aria-labelledby="title-roadmap">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading heading-split">
+<div>
+<p class="eyebrow">11 / THE DEVELOPMENT ROADMAP</p>
+<h2 id="title-roadmap" tabindex="-1" data-type>From the core workflow<br>
+<span class="text-green">to enterprise pilots.</span>
+</h2>
+</div>
+<p class="heading-aside">Five planned phases.<br>Target dates to be confirmed.</p>
+</div><ol class="roadmap" >
+<li>
+<span class="roadmap-node">01</span>
+<span class="micro">FOUNDATION</span>
+<h3>Intake &amp; criteria</h3>
+<p>English/Arabic resume parsing, job criteria, and recruiter dashboard.</p>
+</li><li>
+<span class="roadmap-node">02</span>
+<span class="micro">EVALUATION</span>
+<h3>Assess &amp; shortlist</h3>
+<p>Assessment creation, explainable screening, and human-approved shortlisting.</p>
+</li><li>
+<span class="roadmap-node">03</span>
+<span class="micro">CONVERSATION</span>
+<h3>Bilingual interviews</h3>
+<p>Text and voice, transcripts, scheduling, and communication.</p>
+</li>
+</ol>
+</div></div>
+</section>
+
+<!-- 31 · Connections & enterprise pilots -->
+<section class="slide roadmap-page" id="roadmap-pilots" data-title="Connections &amp; enterprise pilots" data-chapter="opportunity" aria-labelledby="title-roadmap-pilots">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">11 / THE DEVELOPMENT ROADMAP</p><h2 id="title-roadmap-pilots" tabindex="-1" data-type>Connections &amp; enterprise pilots</h2></div><ol class="roadmap" start="4">
+<li>
+<span class="roadmap-node">04</span>
+<span class="micro">CONNECTION</span>
+<h3>Video &amp; integrations</h3>
+<p>Video support, comparative scorecards, ATS integrations, and analytics.</p>
+</li><li>
+<span class="roadmap-node">05</span>
+<span class="micro">VALIDATION</span>
+<h3>Enterprise pilots</h3>
+<p>Independent fairness and security evaluation, pilots, and more languages.</p>
+</li>
+</ol><p class="footnote">Roadmap phases describe the development plan, not verified completion status. Pilot baselines and targets are still to be confirmed.</p>
+</div></div>
+</section>
+
+<!-- 32 · How success will be measured -->
+<section class="slide measurement-page" id="roadmap-measures" data-title="How success will be measured" data-chapter="opportunity" aria-labelledby="title-roadmap-measures">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">11 / THE DEVELOPMENT ROADMAP</p><h2 id="title-roadmap-measures" tabindex="-1" data-type>How success will be measured</h2></div><div class="measurement-panel">
+<div>
+<span class="micro">HOW SUCCESS WILL BE MEASURED</span>
+<h3>Measure the process.<br>Validate the experience.</h3>
+</div>
+<div class="measurement-items">
+<span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-clock"/>
+</svg>Recruiter screening time</span>
+<span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-filter"/>
+</svg>Time to approved shortlist</span>
+<span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-people"/>
+</svg>Agreement with expert reviews</span>
+<span>
+<svg class="icon" aria-hidden="true">
+<use href="#i-message"/>
+</svg>Candidate experience &amp; accessibility</span>
+</div>
+</div>
+</div></div>
+</section>
+
+<!-- 33 · The KEMET-X opportunity -->
+<section class="slide event-date-page" id="event" data-title="The KEMET-X opportunity" data-chapter="opportunity" aria-labelledby="title-event">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="event-copy">
+<p class="eyebrow">12 / KEMET-X 2026</p>
+<h2 id="title-event" tabindex="-1">A global stage.<br>
+<span class="text-sky">An Egyptian landmark.</span>
+</h2>
+<p class="lead" data-type>Kemet-X, powered by Career 180, brings founders, investors, innovators, and ecosystem leaders to the Pyramids of Giza.</p>
+<div class="event-date">
+<b>14–15</b>
+<div>DECEMBER 2026<span>Pyramids of Giza · Egypt</span>
+</div>
+</div>
+<div class="deadline-note">
+<span class="status-dot">
+</span>
+<div>
+<b>Application deadline: 18 September 2026</b>
+<span>Extended by two weeks in the organizer’s email.</span>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+
+<!-- 34 · A global stage at Giza -->
+<section class="slide event-opportunity-page" id="event-opportunity" data-title="A global stage at Giza" data-chapter="opportunity" aria-labelledby="title-event-opportunity">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">12 / KEMET-X 2026</p><h2 id="title-event-opportunity" tabindex="-1" data-type>A global stage at Giza</h2></div><figure class="giza-panel">
+<div class="giza-label">
+<span>KEMET-X</span>
+<b>2026</b>
+</div>
+<img src="assets/img/giza.svg" alt="Sky blue and parrot green line illustration of the Pyramids of Giza." width="650" height="300">
+<figcaption>PYRAMIDS OF GIZA, EGYPT</figcaption>
+</figure><div class="event-metrics">
+<div>
+<b>150<span>+</span>
+</b>
+<p>International investors</p>
+</div>
+<div>
+<b>50<span>+</span>
+</b>
+<p>Countries represented</p>
+</div>
+<div>
+<b>$10,000</b>
+<p>Grant opportunity</p>
+</div>
+</div><p class="footnote">Event figures are from the organizer’s email. Selected startups may pitch internationally and have a chance to win the grant; selection and funding are not guaranteed.</p>
+</div></div>
+</section>
+
+<!-- 35 · Build the next chapter with us -->
+<section class="slide ask-page" id="contact" data-title="Build the next chapter with us" data-chapter="opportunity" aria-labelledby="title-contact">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading">
+<div>
+<p class="eyebrow">13 / LET’S BUILD WHAT COMES NEXT</p>
+<h2 id="title-contact" tabindex="-1" data-type>Better hiring is a<br>
+<span class="text-green">shared ambition.</span>
+</h2>
+</div>
+</div><div class="ask-list">
+<div>
+<span>01</span>
+<p>
+<b>Pilot customers</b>Employers hiring at scale in English and Arabic.</p>
+</div>
+<div>
+<span>02</span>
+<p>
+<b>HR &amp; recruitment expertise</b>Partners to validate workflows and evaluation rubrics.</p>
+</div>
+<div>
+<span>03</span>
+<p>
+<b>Technology partners</b>ATS, calendar, communications, and assessment integrations.</p>
+</div>
+<div>
+<span>04</span>
+<p>
+<b>Investment or grant support</b>Product development, evaluation, compliance readiness, and market entry. Amount to be confirmed.</p>
+</div>
+</div>
+</div></div>
+</section>
+
+<!-- 36 · Start a conversation -->
+<section class="slide contact-page" id="contact-details" data-title="Start a conversation" data-chapter="opportunity" aria-labelledby="title-contact-details">
+<div class="slide-canvas"><div class="slide-inner">
+<div class="section-heading"><p class="eyebrow">13 / LET’S BUILD WHAT COMES NEXT</p><h2 id="title-contact-details" tabindex="-1" data-type>Start a conversation</h2></div><aside class="contact-panel panel">
+<span class="brand-mark">
+<svg class="icon" aria-hidden="true">
+<use href="#i-mark"/>
+</svg>
+</span>
+<span class="micro">START A CONVERSATION</span>
+<h3>Muhammad<br>Hassan Mukhtar</h3>
+<p>Founder &amp; CEO · Manchester, UK</p>
+<a href="mailto:mhmrajpoot101@gmail.com" class="contact-link">
+<svg class="icon" aria-hidden="true">
+<use href="#i-mail"/>
+</svg>mhmrajpoot101@gmail.com<svg class="icon" aria-hidden="true">
+<use href="#i-arrow"/>
+</svg>
+</a>
+<a href="tel:+447350536488" class="phone-link">+44 7350 536488</a>
+<span class="contact-status">
+<span class="status-dot">
+</span>Prototype ready · R&amp;D · Pre-revenue</span>
+</aside><div class="closing-line">
+<span>MiyarHire AI</span>
+<p>The evidence is connected. <b>The decision stays human.</b>
+</p>
+<span lang="ar" dir="rtl">مِعيار</span>
+</div>
+</div></div>
+</section>
+    </main>
+    <footer class="deck-footer js-only">
+<div class="slide-meta">
+<b id="currentSlide">01</b>
+<span class="meta-divider">/</span>
+<span id="totalSlides">36</span>
+<span id="languagePhase" class="language-phase" aria-label="Current slide language">EN</span>
+<span id="sectionName">A better hiring journey</span>
+</div>
+<nav id="progressTrack" class="progress-track" aria-label="Go to a slide">
+</nav>
+<div class="playback-controls">
+<button id="playBtn" class="tool-button" type="button" aria-pressed="false" aria-label="Start autoplay">
+<svg class="icon" aria-hidden="true">
+<use href="#i-play"/>
+</svg>
+<span id="playLabel">Play</span>
+</button>
+<span class="control-divider">
+</span>
+<button id="prevBtn" class="nav-arrow previous" type="button" aria-label="Previous slide">
+<svg class="icon" aria-hidden="true">
+<use href="#i-arrow"/>
+</svg>
+</button>
+<button id="nextBtn" class="nav-arrow" type="button" aria-label="Next slide">
+<svg class="icon" aria-hidden="true">
+<use href="#i-arrow"/>
+</svg>
+</button>
+</div>
+</footer>
+  </div>
+  <dialog id="agendaDialog" aria-labelledby="agendaTitle">
+<div class="dialog-header">
+<div>
+<p class="eyebrow">THE PRESENTATION</p>
+<h2 id="agendaTitle">Explore the story.</h2>
+</div>
+<button id="closeAgenda" class="tool-button icon-only" type="button" aria-label="Close slide overview">
+<svg class="icon" aria-hidden="true">
+<use href="#i-close"/>
+</svg>
+</button>
+</div>
+<ol id="agendaList" class="agenda-list" aria-label="Slide overview">
+</ol>
+<p class="dialog-hint">← → Navigate <span>Space · Play / pause</span>
+<span>F · Fullscreen</span>
+</p>
+</dialog>
+  <p class="visually-hidden" id="slideStatus" role="status" aria-live="polite" aria-atomic="true">
+</p>
+  <noscript>
+<p class="noscript-note">All slides are shown in reading order. Enable JavaScript for presentation controls.</p>
+</noscript>
+</body>
+</html>

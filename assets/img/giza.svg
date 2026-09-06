@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="300" viewBox="0 0 650 300" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">The Pyramids of Giza</title>
+  <desc id="desc">A minimal geometric illustration of three pyramids, drawn in the presentation's sky blue and parrot green palette.</desc>
+  <defs><pattern id="giza-dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#C6DEEE"/></pattern></defs>
+  <rect width="650" height="300" rx="28" fill="#F3F9FD"/>
+  <circle cx="491" cy="96" r="66" fill="url(#giza-dots)"/>
+  <circle cx="491" cy="96" r="31" fill="#43C41F"/>
+  <path d="M45 90h62m10 0h16M540 157h47m10 0h14M169 51h36" stroke="#C6DEEE" stroke-width="2" stroke-linecap="round"/>
+  <path d="m323 238 129-135 127 135" fill="#EDF5FA" stroke="#0B7FC0" stroke-width="2" stroke-linejoin="round"/>
+  <path d="m452 103 38 135h89z" fill="#DCEBF6" stroke="#0B7FC0" stroke-width="2" stroke-linejoin="round"/>
+  <path d="m56 239 172-191 170 191" fill="#FFFFFF" stroke="#0B7FC0" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="m228 48 54 191h116z" fill="#DCEBF6" stroke="#0B7FC0" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="m84 209 186 0M110 180h152m-126-30h117m-91-28h82m-54-29h46" stroke="#DCEBF6" stroke-width="1.5"/>
+  <path d="m449 165 58 0m-99 29h126m-152 25h176" stroke="#C6DEEE" stroke-width="1.5"/>
+  <path d="m272 241 75-87 88 87" fill="#F3F9FD" stroke="#0B7FC0" stroke-width="2" stroke-linejoin="round"/>
+  <path d="m347 154 21 87h67z" fill="#C6DEEE" stroke="#0B7FC0" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M31 241h588" stroke="#0B7FC0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M82 256h118m35 0h29m258 0h46M411 272h61" stroke="#C6DEEE" stroke-width="2" stroke-linecap="round"/>
+  <path d="M39 241h50m469 0h53" stroke="#43C41F" stroke-width="5" stroke-linecap="round"/>
+  <path d="M31 281h35m539 0h14" stroke="#43C41F" stroke-width="2" stroke-linecap="round"/>
+</svg>

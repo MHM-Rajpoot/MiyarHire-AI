@@ -1,0 +1,262 @@
+/* Each presentation page has one measured canvas, with no scrolling or cropping.
+   Reading and print views retain the natural document layout. */
+@media screen {
+  .presentation-mode .stage { position: relative; overflow: clip; }
+  .presentation-mode .slide { height: 100%; min-height: 0; overflow: clip; }
+  .presentation-mode .slide-canvas {
+    position: absolute; left: 50%; top: 50%; width: min(100%, 1320px);
+    transform: translate(-50%, -50%) scale(var(--slide-scale, 1));
+    transform-origin: center;
+  }
+  .presentation-mode .slide .slide-inner {
+    min-height: 0; padding: clamp(18px, 3vw, 40px); gap: clamp(14px, 2vw, 26px);
+  }
+  .presentation-mode h1 { font-size: clamp(36px, 5vw, 72px); }
+  .presentation-mode h2 { font-size: clamp(28px, 3.6vw, 49px); }
+  html[lang="ar"] .presentation-mode h1, html[lang="ar"] .presentation-mode h2 { line-height: 1.25; }
+  .presentation-mode .eyebrow { margin-bottom: 12px; }
+  .presentation-mode .lead { margin-top: 12px; font-size: clamp(12px, 1.25vw, 17px); line-height: 1.6; }
+  .presentation-mode .heading-aside { max-width: 270px; }
+  .presentation-mode .opening-page .hero-copy { max-width: 950px; }
+  .presentation-mode .opening-page .hero-description { max-width: 750px; }
+  .presentation-mode .opening-page .hero-actions { margin-top: 20px; }
+  .presentation-mode .overview-page .hero-visual { width: min(100%, 650px); margin-inline: auto; padding: 14px; }
+  .presentation-mode .overview-page .hero-art { max-height: 290px; }
+  .presentation-mode .overview-page .hero-bottom { padding-top: 14px; }
+  .presentation-mode .workflow-grid { grid-template-columns: repeat(4, 1fr); }
+  .presentation-mode .workflow-grid li { padding: 18px; }
+  .presentation-mode .agent-grid { grid-template-columns: repeat(3, 1fr); }
+  .presentation-mode .team-hub { width: min(100%, 960px); margin-inline: auto; padding: 0; }
+  .presentation-mode .scene-figure { width: min(100%, 1180px); }
+  .presentation-mode .team-hub figcaption { margin-top: 8px; }
+  .presentation-mode .agent-card h3 { font-size: clamp(17px, 1.7vw, 24px); }
+  .presentation-mode .agent-card p { font-size: clamp(12px, 1.2vw, 16px); }
+  .presentation-mode .team-agents .agent-card { padding: 20px; }
+  .presentation-mode .agent-detail-page .agent-card:nth-child(1) { animation-delay: 0s; }
+  .presentation-mode .agent-detail-page .agent-card:nth-child(2) { animation-delay: 1.5s; }
+  .presentation-mode .agent-detail-page .agent-card:nth-child(3) { animation-delay: 3s; }
+  .presentation-mode .support-agents { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .presentation-mode .support-agents > span { padding: 22px; border: 1px solid var(--parrot); border-radius: 12px; background: var(--parrot-wash); font-size: 14px; }
+  .presentation-mode .support-agents b { font-size: 18px; }
+  .presentation-mode .editorial-copy { max-width: 980px; }
+  .presentation-mode .editorial-copy .lead { margin-bottom: 16px; }
+  .presentation-mode .feature-line { margin-top: 15px; }
+  .presentation-mode .feature-line p { font-size: clamp(12px, 1.2vw, 16px); }
+  .presentation-mode .assessment-diagram { width: min(100%, 700px); margin-inline: auto; }
+  .presentation-mode .three-column { gap: 20px; }
+  .presentation-mode .plain-feature p { font-size: clamp(12px, 1.2vw, 16px); }
+  .presentation-mode .evidence-inputs { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .presentation-mode .evidence-source { align-items: flex-start; }
+  .presentation-mode .evidence-source p { font-size: clamp(12px, 1.15vw, 15px); }
+  .presentation-mode .scorecard { width: min(100%, 850px); margin-inline: auto; }
+  .presentation-mode .scorecard-row { font-size: 14px; }
+  .presentation-mode .trust-card p { font-size: clamp(12px, 1.2vw, 16px); }
+  .presentation-mode .market-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .presentation-mode .buyer-panel { width: min(100%, 850px); margin-inline: auto; }
+  .presentation-mode .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  .presentation-mode .pricing-card > .icon { margin-block: 15px 10px; }
+  .presentation-mode .pricing-card p, .presentation-mode .pricing-basis { font-size: 14px; }
+  .presentation-mode .prototype-panel { width: min(100%, 900px); margin-inline: auto; }
+  .presentation-mode .founder-panel { max-width: 1000px; }
+  .presentation-mode .founder-panel p { font-size: clamp(12px, 1.2vw, 16px); }
+  .presentation-mode .roadmap { grid-template-columns: repeat(3, 1fr); }
+  .presentation-mode #roadmap-pilots .roadmap { grid-template-columns: repeat(2, 1fr); }
+  .presentation-mode .roadmap p { font-size: clamp(12px, 1.2vw, 16px); }
+  .presentation-mode .event-copy { max-width: 1000px; }
+  .presentation-mode .giza-panel { width: min(100%, 650px); margin-inline: auto; padding: 14px; }
+  .presentation-mode .giza-panel img { max-height: 140px; width: 100%; object-fit: contain; }
+  .presentation-mode .giza-label > b { font-size: 40px; }
+  .presentation-mode .event-metrics b { font-size: 32px; }
+  .presentation-mode .ask-list { max-width: 1050px; }
+  .presentation-mode .ask-list > div { padding: 13px 0; }
+  .presentation-mode .contact-panel { width: min(100%, 700px); margin-inline: auto; }
+  .presentation-mode .contact-panel h3 { margin-top: 18px; }
+  .progress-track { min-width: 0; }
+  .progress-track button { min-width: 0; }
+}
+@media screen and (max-width: 760px) {
+  .presentation-mode .presentation { grid-template-rows: 62px minmax(0, 1fr) 58px; }
+  .presentation-mode .topbar { min-height: 62px; }
+  .presentation-mode .slide .slide-inner { padding: 18px; gap: 14px; }
+  .presentation-mode h1 { font-size: 36px; }
+  .presentation-mode h2 { font-size: 28px; }
+  .presentation-mode .heading-split { gap: 8px; }
+  .presentation-mode .heading-aside { padding-bottom: 0; font-size: 11px; }
+  .presentation-mode .hero-copy { padding: 0; }
+  .presentation-mode .hero .eyebrow { margin-bottom: 14px; }
+  .presentation-mode .hero-description { margin-top: 14px; font-size: 13px; line-height: 1.6; }
+  .presentation-mode .arabic-brand { font-size: 17px; margin-top: 10px; }
+  .presentation-mode .hero-actions { gap: 8px; }
+  .presentation-mode .overview-page .hero-art { max-height: 210px; }
+  .presentation-mode .hero-bottom { gap: 12px; }
+  .presentation-mode .hero-facts { justify-content: space-between; width: 100%; gap: 12px; }
+  .presentation-mode .hero-facts b { font-size: 15px; }
+  .presentation-mode .hero-facts > span { flex: 1; min-width: 0; }
+  .presentation-mode .event-signature { font-size: 15px; }
+  .presentation-mode .vision-demo figcaption { margin-top: 8px; }
+  .presentation-mode .workflow-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .presentation-mode .workflow-grid li { padding: 12px; }
+  .presentation-mode .workflow-grid h3 { font-size: 16px; }
+  .presentation-mode .step-number { margin-bottom: 8px; }
+  .presentation-mode .support-strip { gap: 8px 18px; padding: 10px 0; font-size: 10px; }
+  .presentation-mode .team-hub p { margin-top: 8px; }
+  .presentation-mode .agent-grid { grid-template-columns: 1fr; gap: 12px; }
+  .presentation-mode .team-agents .agent-card { padding: 12px; }
+  .presentation-mode .agent-card h3 { margin-block: 5px; font-size: 17px; }
+  .presentation-mode .agent-card p { font-size: 12px; }
+  .presentation-mode .support-agents { gap: 12px; }
+  .presentation-mode .support-agents > span { padding: 14px; font-size: 12px; }
+  .presentation-mode .support-agents b { font-size: 16px; }
+  .presentation-mode .feature-line { margin-top: 12px; gap: 10px; }
+  .presentation-mode .feature-line h3 { font-size: 16px; margin-bottom: 4px; }
+  .presentation-mode .feature-line .icon-tile { width: 34px; height: 34px; }
+  .presentation-mode .editorial-copy .lead { margin-bottom: 12px; }
+  .presentation-mode .three-column { gap: 14px; }
+  .presentation-mode .plain-feature { padding-top: 10px; }
+  .presentation-mode .evidence-inputs { grid-template-columns: 1fr; gap: 12px; }
+  .presentation-mode .evidence-source { padding: 12px; }
+  .presentation-mode .scorecard { padding: 16px; }
+  .presentation-mode .scorecard-row { font-size: 12px; padding-block: 10px; }
+  .presentation-mode .trust-grid { gap: 12px; }
+  .presentation-mode .trust-card { padding-block: 16px; }
+  .presentation-mode .trust-card h3 { font-size: 18px; }
+  .presentation-mode .trust-boundary { padding: 12px; }
+  .presentation-mode .market-cards { grid-template-columns: 1fr; gap: 22px; }
+  .presentation-mode .buyer-panel { padding: 18px; }
+  .presentation-mode .buyer-panel h3 { margin-block: 12px; font-size: 23px; }
+  .presentation-mode .clean-list { margin-block: 12px; }
+  .presentation-mode .clean-list li { padding-block: 5px; }
+  .presentation-mode .buyer-note { margin-top: 12px; }
+  .presentation-mode .sector-strip { padding-top: 12px; gap: 8px; }
+  .presentation-mode .tag-row { gap: 5px; }
+  .presentation-mode .tag-row span { padding: 4px 8px; font-size: 10px; }
+  .presentation-mode .pricing-grid { gap: 10px; }
+  .presentation-mode .pricing-card { padding: 12px; }
+  .presentation-mode .pricing-card h3 { font-size: 18px; }
+  .presentation-mode .pricing-card p, .presentation-mode .pricing-basis { font-size: 12px; }
+  .presentation-mode .pricing-basis { margin-top: 12px; }
+  .presentation-mode .founder-panel h3 { font-size: 27px; margin-block: 12px; }
+  .presentation-mode .founder-panel p { margin-top: 10px; }
+  .presentation-mode .affiliation { margin-top: 12px; }
+  .presentation-mode .status-metrics { gap: 14px; }
+  .presentation-mode .status-metrics b { font-size: 27px; }
+  .presentation-mode .roadmap, .presentation-mode #roadmap-pilots .roadmap { grid-template-columns: 1fr; }
+  .presentation-mode .roadmap li { min-height: 0; padding-bottom: 18px; }
+  .presentation-mode .roadmap li:last-child { padding-bottom: 0; }
+  .presentation-mode .roadmap h3 { font-size: 18px; margin-block: 4px; }
+  .presentation-mode .measurement-panel { padding: 16px; gap: 18px; }
+  .presentation-mode .event-date { margin-block: 20px; }
+  .presentation-mode .giza-panel { padding: 10px; }
+  .presentation-mode .giza-panel img { max-height: 110px; }
+  .presentation-mode .giza-label > b { font-size: 32px; }
+  .presentation-mode .event-metrics b { font-size: 26px; }
+  .presentation-mode .ask-list > div { padding-block: 10px; }
+  .presentation-mode .ask-list p { font-size: 12px; }
+  .presentation-mode .contact-panel { padding: 18px; }
+  .presentation-mode .contact-panel h3 { font-size: 26px; }
+  .presentation-mode .closing-line { padding-top: 12px; gap: 6px; }
+  .progress-track { gap: 2px; }
+  .progress-track button { min-width: 0; }
+  .deck-footer { gap: 8px; }
+}
+@media screen and (max-width: 480px) {
+  /* All slides remain accessible from the overview; the track shows nearby pages. */
+  .progress-track button:not(.near-current) { display: none; }
+  .progress-track button { min-width: 2px; }
+}
+@media screen and (max-height: 500px) {
+  .presentation-mode .presentation { grid-template-rows: 44px minmax(0, 1fr) 44px; }
+  .presentation-mode .topbar { min-height: 44px; }
+  .presentation-mode .brand-caption { display: none; }
+  .presentation-mode .slide .slide-inner { padding: 12px 22px; gap: 10px; }
+}
+@media print {
+  .slide-canvas { position: static; transform: none; width: auto; }
+  .slide .slide-inner { min-height: 0; }
+  .overview-page .hero-visual { max-width: 450px; margin-inline: auto; }
+  .overview-page .hero-art { max-height: 210px; }
+  .team-page .team-hub { max-width: 620px; margin-inline: auto; }
+  .pricing-page .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  .roadmap-page .roadmap { grid-template-columns: repeat(3, 1fr); }
+  .event-opportunity-page .giza-panel { max-width: 500px; margin-inline: auto; }
+  .event-opportunity-page .giza-panel img { max-height: 120px; }
+  .event-opportunity-page .giza-label > b { font-size: 36px; }
+  .contact-page .contact-panel { max-width: 700px; margin-inline: auto; }
+}
+
+@media screen and (max-width: 380px) {
+  .presentation-mode .slide .slide-inner { padding: 14px; gap: 10px; }
+  .presentation-mode h1 { font-size: 32px; }
+  .presentation-mode h2 { font-size: 24px; }
+  .presentation-mode h3, html[lang="ar"] .presentation-mode h3 { line-height: 1.3; }
+  .presentation-mode .eyebrow { margin-bottom: 8px; }
+  .presentation-mode .lead { margin-top: 8px; }
+  .presentation-mode .comparison-row > * { padding: 9px 10px; }
+  .presentation-mode .comparison-row > strong { padding: 8px 10px 4px; }
+  .presentation-mode .team-agents .agent-card { padding: 10px; }
+  .presentation-mode .agent-grid { gap: 9px; }
+  .presentation-mode .agent-card h3 { font-size: 16px; }
+  .presentation-mode .assessment-diagram { padding: 14px; }
+  .presentation-mode .criteria-box { padding: 10px; }
+  .presentation-mode .interview-panel { padding: 14px; }
+  .presentation-mode .wave-image { height: 65px; }
+  .presentation-mode .trust-card { padding-block: 12px; }
+  .presentation-mode .footnote { font-size: 10px; line-height: 1.5; }
+  .presentation-mode .roadmap h3 { font-size: 16px; }
+  .presentation-mode .roadmap li { padding-bottom: 12px; }
+  .presentation-mode .prototype-panel { padding: 16px; }
+  .presentation-mode .overview-page .hero-art { max-height: 160px; }
+}
+@media screen and (max-height: 500px) and (min-width: 600px) {
+  .presentation-mode h1 { font-size: 34px; }
+  .presentation-mode h2, .presentation-mode .event-copy h2 { font-size: 26px; }
+  .presentation-mode h3, html[lang="ar"] .presentation-mode h3 { line-height: 1.3; }
+  .presentation-mode .eyebrow { margin-bottom: 6px; }
+  .presentation-mode .hero-copy { padding: 0; }
+  .presentation-mode .hero-description { margin-top: 10px; }
+  .presentation-mode .arabic-brand { margin-top: 6px; }
+  .presentation-mode .hero-actions { margin-top: 10px; flex-direction: row; }
+  .presentation-mode .overview-page .hero-art { max-height: 120px; }
+  .presentation-mode .overview-page .hero-visual { padding: 8px; }
+  .presentation-mode .hero-bottom { padding-top: 8px; }
+  .presentation-mode .team-hub p, .presentation-mode .team-hub figcaption { margin-top: 6px; }
+  .presentation-mode .assessment-diagram { display: grid; grid-template-columns: 1fr 18px 1.1fr 18px 1fr; gap: 5px; align-items: center; padding: 10px; width: 100%; }
+  .presentation-mode .assessment-diagram .diagram-label, .presentation-mode .assessment-diagram figcaption { grid-column: 1 / -1; margin: 0; }
+  .presentation-mode .assessment-diagram .connector-arrow { transform: rotate(-90deg); }
+  html[lang="ar"] .presentation-mode .assessment-diagram .connector-arrow { transform: rotate(90deg); }
+  .presentation-mode .criteria-box { padding: 10px; }
+  .presentation-mode .interview-panel { padding: 12px; }
+  .presentation-mode .wave-image { height: 60px; margin-block: 0; }
+  .presentation-mode .scorecard { padding: 12px; }
+  .presentation-mode .scorecard-heading { margin-bottom: 8px; }
+  .presentation-mode .scorecard-row { padding-block: 6px; }
+  .presentation-mode .scorecard-decision { padding: 8px; margin-top: 5px; }
+  .presentation-mode .buyer-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; padding: 12px; }
+  .presentation-mode .buyer-panel > .micro { grid-column: 1; }
+  .presentation-mode .buyer-panel h3 { grid-column: 1; margin: 0; font-size: 22px; }
+  .presentation-mode .buyer-panel .clean-list { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
+  .presentation-mode .buyer-panel .clean-list li { padding-block: 4px; }
+  .presentation-mode .buyer-note { grid-column: 1 / -1; margin-top: 0; padding-top: 8px; }
+  .presentation-mode .sector-strip { flex-direction: row; align-items: center; padding-top: 8px; gap: 8px; }
+  .presentation-mode .pricing-card { padding: 12px; }
+  .presentation-mode .pricing-card > .icon { margin-block: 6px; }
+  .presentation-mode .pricing-card h3 { font-size: 22px; }
+  .presentation-mode .pricing-card p, .presentation-mode .pricing-basis { font-size: 12px; }
+  .presentation-mode .pricing-basis { margin-top: 8px; }
+  .presentation-mode .prototype-panel { padding: 12px; }
+  .presentation-mode .prototype-panel h3 { font-size: 22px; margin-top: 8px; }
+  .presentation-mode .check-list { margin-block: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .presentation-mode .check-list li { margin: 0; }
+  .presentation-mode .giza-panel img { max-height: 70px; }
+  .presentation-mode .giza-label > b { font-size: 26px; }
+  .presentation-mode .event-metrics b { font-size: 26px; }
+  .presentation-mode .event-opportunity-page .slide-inner { gap: 8px; }
+  .presentation-mode .ask-list > div { padding-block: 7px; }
+  .presentation-mode .contact-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; padding: 12px; }
+  .presentation-mode .contact-panel > .brand-mark { display: none; }
+  .presentation-mode .contact-panel > .micro, .presentation-mode .contact-panel h3, .presentation-mode .contact-panel > p { grid-column: 1; margin: 0; }
+  .presentation-mode .contact-panel h3 { font-size: 24px; }
+  .presentation-mode .contact-panel .contact-link { grid-column: 2; grid-row: 1; margin: 0; }
+  .presentation-mode .contact-panel .phone-link { grid-column: 2; grid-row: 2; margin: 0; }
+  .presentation-mode .contact-panel .contact-status { grid-column: 2; grid-row: 3; margin: 0; }
+}

@@ -1,0 +1,31 @@
+/* Local theme and character masks; the text remains fully shaped in its original nodes. */
+::highlight(deck-converting) { color: transparent; text-shadow: none; }
+::highlight(deck-typing) { color: transparent; text-shadow: none; }
+@media screen {
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0a1520; --bg-2: #102331; --surface: #122533; --surface-2: #192f3e;
+    --ink: #eef7ff; --ink-2: #b9d0e1; --ink-3: #90aec3;
+    --line: #365164; --line-soft: #2b4557;
+    --sky: #72caff; --sky-vivid: #47bfff; --sky-wash: rgba(71,191,255,.13);
+    --parrot: #99e580; --parrot-vivid: #86df63; --parrot-wash: rgba(134,223,99,.13);
+  }
+  html[data-theme="dark"] .button-primary { background: #aacee5; color: #102331; border-color: #aacee5; }
+  /* The exported scenes carry their own light background; dim them on a dark slide. */
+  html[data-theme="dark"] .scene-image { filter: brightness(.92); border-color: var(--line); }
+  html[data-theme="dark"] .hero-art { filter: invert(.86) hue-rotate(180deg); }
+  html[data-theme="dark"] .giza-panel { background: var(--surface-2); }
+  html[data-theme="dark"] .giza-panel img { filter: brightness(1.3); }
+  html[data-theme="dark"] .language-lockup > span:last-child { color: var(--parrot); }
+  html[data-theme="dark"] .contact-status { color: var(--ink-2); }
+}
+.theme-button { font-size: 19px; }
+@media screen and (max-width: 760px) {
+  .header-tools .theme-button { min-width: 30px; width: 30px; }
+}
+@media screen and (max-width: 380px) {
+  .topbar { gap: 4px; }
+  .header-tools { gap: 1px; }
+  .header-tools .tool-button { min-width: 29px; width: 29px; }
+  .header-tools .language-button { min-width: 53px; width: auto; padding-inline: 5px; }
+}

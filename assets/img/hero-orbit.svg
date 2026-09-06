@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="660" viewBox="0 0 760 660" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">MiyarHire: six connected stages of hiring</title>
+  <desc id="desc">Intake, criteria, assessment, shortlist, interview, and scorecard surround a connected central mark. The orbit illustrates the coordinated hiring workflow, not measured performance.</desc>
+  <defs>
+    <linearGradient id="orbit-fill" x1="380" y1="112" x2="380" y2="548" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#EDF5FA"/></linearGradient>
+    <linearGradient id="center-fill" x1="322" y1="272" x2="438" y2="388" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F3F9FD"/></linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#C6DEEE"/></pattern>
+    <symbol id="intake" viewBox="0 0 32 32"><path d="M7 6h12l6 6v14H7zM19 6v7h6M11 18h10M11 22h6"/></symbol>
+    <symbol id="criteria" viewBox="0 0 32 32"><path d="m5 8 2 2 4-4m3 2h12M5 16l2 2 4-4m3 2h12M5 24l2 2 4-4m3 2h12"/></symbol>
+    <symbol id="assess" viewBox="0 0 32 32"><rect x="7" y="6" width="19" height="23" rx="3"/><rect x="12" y="3" width="9" height="6" rx="2" fill="#FFFFFF"/><path d="m11 19 3 3 7-8"/></symbol>
+    <symbol id="shortlist" viewBox="0 0 32 32"><circle cx="12" cy="10" r="4"/><path d="M4 26v-3a8 8 0 0 1 16 0v3M22 10h7M22 15h5m-5 8 2 2 5-6"/></symbol>
+    <symbol id="interview" viewBox="0 0 32 32"><path d="M27 16c0 6-5 10-11 10h-3l-7 4 1-8a10 10 0 0 1-2-6C5 10 10 6 16 6s11 4 11 10Z"/><path d="M11 14v4m5-7v10m5-7v4"/></symbol>
+    <symbol id="scorecard" viewBox="0 0 32 32"><rect x="6" y="4" width="21" height="25" rx="3"/><path d="M11 10h10M11 15h6M11 23v-4m5 4v-6m5 6v-9"/></symbol>
+  </defs>
+  <circle cx="380" cy="330" r="300" fill="url(#dots)"/>
+  <circle cx="380" cy="330" r="248" fill="url(#orbit-fill)" stroke="#DCEBF6"/>
+  <circle cx="380" cy="330" r="209" stroke="#C6DEEE" stroke-dasharray="3 10"/>
+  <circle cx="380" cy="330" r="168" stroke="#DCEBF6"/>
+  <path d="M380 82a248 248 0 0 1 214.77 124" stroke="#12A5EA" stroke-width="3" stroke-linecap="round"/>
+  <path d="M594.77 454A248 248 0 0 1 380 578" stroke="#43C41F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M165.23 454a248 248 0 0 1 0-248" stroke="#12A5EA" stroke-width="3" stroke-linecap="round"/>
+  <g stroke="#C6DEEE" stroke-width="1.5" stroke-dasharray="4 6">
+    <path d="M380 132v108M551.47 231l-93.53 54M551.47 429l-93.53-54M380 528V420M208.53 429l93.53-54M208.53 231l93.53 54"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#DCEBF6">
+    <rect x="302" y="37" width="156" height="102" rx="22"/>
+    <rect x="518" y="161" width="156" height="102" rx="22"/>
+    <rect x="518" y="409" width="156" height="102" rx="22"/>
+    <rect x="302" y="533" width="156" height="102" rx="22"/>
+    <rect x="86" y="409" width="156" height="102" rx="22"/>
+    <rect x="86" y="161" width="156" height="102" rx="22"/>
+  </g>
+  <g fill="#F3F9FD">
+    <circle cx="380" cy="77" r="25"/><circle cx="596" cy="201" r="25"/><circle cx="596" cy="449" r="25"/>
+    <circle cx="380" cy="573" r="25"/><circle cx="164" cy="449" r="25"/><circle cx="164" cy="201" r="25"/>
+  </g>
+  <g stroke="#0B7FC0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#intake" x="364" y="61" width="32" height="32"/>
+    <use href="#criteria" x="580" y="185" width="32" height="32"/>
+    <use href="#assess" x="580" y="433" width="32" height="32"/>
+    <use href="#shortlist" x="364" y="557" width="32" height="32"/>
+    <use href="#interview" x="148" y="433" width="32" height="32"/>
+    <use href="#scorecard" x="148" y="185" width="32" height="32"/>
+  </g>
+  <g fill="#072438" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" text-anchor="middle">
+    <text x="380" y="120">Intake</text><text x="596" y="244">Criteria</text><text x="596" y="492">Assessment</text>
+    <text x="380" y="616">Shortlist</text><text x="164" y="492">Interview</text><text x="164" y="244">Scorecard</text>
+  </g>
+  <g fill="#43C41F" stroke="#FFFFFF" stroke-width="3">
+    <circle cx="448" cy="47" r="7"/><circle cx="664" cy="171" r="7"/><circle cx="664" cy="419" r="7"/>
+    <circle cx="448" cy="543" r="7"/><circle cx="232" cy="419" r="7"/><circle cx="232" cy="171" r="7"/>
+  </g>
+  <circle cx="380" cy="330" r="111" fill="#FFFFFF" stroke="#DCEBF6"/>
+  <circle cx="380" cy="330" r="92" fill="url(#center-fill)" stroke="#C6DEEE"/>
+  <g transform="translate(336.8 274) scale(2.7)" stroke="#0B7FC0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 23V9l11 8L27 9v14M5 9l11-6 11 6M16 17v10"/>
+    <circle cx="16" cy="17" r="3"/>
+    <circle cx="16" cy="17" r="3" fill="#43C41F" stroke="none"/>
+  </g>
+  <text x="380" y="370" fill="#072438" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="-.5" text-anchor="middle">MiyarHire<tspan dx="4" fill="#2E8F14">AI</tspan></text>
+</svg>
