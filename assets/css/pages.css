@@ -20,6 +20,9 @@
   .presentation-mode .opening-page .hero-copy { max-width: 950px; }
   .presentation-mode .opening-page .hero-description { max-width: 750px; }
   .presentation-mode .opening-page .hero-actions { margin-top: 20px; }
+  .presentation-mode .opening-page .hero-points { max-width: 900px; margin-top: 18px; }
+  .presentation-mode .opening-page .hero-points b { font-size: clamp(12px, 1.15vw, 15px); }
+  .presentation-mode .opening-page .hero-points span { font-size: clamp(11px, 1.05vw, 14px); }
   .presentation-mode .overview-page .hero-visual { width: min(100%, 650px); margin-inline: auto; padding: 14px; }
   .presentation-mode .overview-page .hero-art { max-height: 290px; }
   .presentation-mode .overview-page .hero-bottom { padding-top: 14px; }
@@ -87,6 +90,8 @@
   .presentation-mode .hero-description { margin-top: 14px; font-size: 13px; line-height: 1.6; }
   .presentation-mode .arabic-brand { font-size: 17px; margin-top: 10px; }
   .presentation-mode .hero-actions { gap: 8px; }
+  .presentation-mode .hero-points { margin-top: 12px; gap: 10px; }
+  .presentation-mode .hero-points p { padding: 10px 12px; }
   .presentation-mode .overview-page .hero-art { max-height: 210px; }
   .presentation-mode .hero-bottom { gap: 12px; }
   .presentation-mode .hero-facts { justify-content: space-between; width: 100%; gap: 12px; }
@@ -216,6 +221,8 @@
   .presentation-mode .hero-description { margin-top: 10px; }
   .presentation-mode .arabic-brand { margin-top: 6px; }
   .presentation-mode .hero-actions { margin-top: 10px; flex-direction: row; }
+  .presentation-mode .hero-points { margin-top: 8px; gap: 8px; }
+  .presentation-mode .hero-points p { padding: 8px 10px; gap: 3px; }
   .presentation-mode .overview-page .hero-art { max-height: 120px; }
   .presentation-mode .overview-page .hero-visual { padding: 8px; }
   .presentation-mode .hero-bottom { padding-top: 8px; }

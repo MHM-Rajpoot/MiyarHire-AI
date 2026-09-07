@@ -15,9 +15,11 @@ scorecards. Recruiters remain responsible for every final hiring decision.
 | **Stage** | Research and Development; working prototype, not publicly available |
 | **Primary markets** | MENA and international employers |
 | **Languages** | English and Arabic, with additional languages planned |
+| **Presentation** | <https://mhm-rajpoot.github.io/MiyarHire-AI/> |
 | **Looking for** | Pilot customers, HR and recruitment partners, technology partners, investment |
 
-This folder holds the conference presentation for the project. To read the deck,
+This folder holds the conference presentation for the project. The deck is
+published at <https://mhm-rajpoot.github.io/MiyarHire-AI/>; to read it locally,
 open [index.html](index.html) in a browser — there is no build step. The rest of
 this file summarizes the project itself; see [docs/](docs/) for how the
 presentation is built and where each slide's content comes from.
@@ -199,10 +201,14 @@ site/
     └── assets.md               illustration inventory and GIF rebuild steps
 ```
 
-Open `index.html` directly in a browser. Everything works offline except the
-stage-one demonstration on slide 27, which streams from YouTube; over `file://`
-that slide shows its local poster instead. To play it inline, serve the folder
-with `python3 -m http.server` and open `http://localhost:8000/`.
+The deck is published from this folder to GitHub Pages at
+<https://mhm-rajpoot.github.io/MiyarHire-AI/>, where every slide — including the
+stage-one video on slide 27 — plays as intended.
+
+Locally, open `index.html` directly in a browser. Everything works offline except
+the stage-one demonstration on slide 27, which streams from YouTube; over
+`file://` that slide shows its local poster instead. To play it inline, serve the
+folder with `python3 -m http.server` and open `http://localhost:8000/`.
 
 ## Source and status
 
